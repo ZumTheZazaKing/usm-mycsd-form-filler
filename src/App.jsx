@@ -102,7 +102,7 @@ function App() {
         const link = document.createElement("a");
         link.href = URL.createObjectURL(blob);
         link.setAttribute('target', '_blank');
-        // link.download = `MyCSD_${formData.name.replace(/\s+/g, '_') || 'Form'}.pdf`;
+        link.download = `MyCSD_${formData.name.replace(/\s+/g, '_') || 'Form'}.pdf`;
         link.click();
         URL.revokeObjectURL(link.href);
     }
