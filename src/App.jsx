@@ -151,7 +151,7 @@ function App() {
 
                 {/* These two now sit nicely side-by-side */}
                 <div className={'flex flex-col gap-2'}>
-                    <label htmlFor="">Peranan <small>(Cth: Peserta)</small></label>
+                    <label htmlFor="">Peranan <small>(Cth: Keahlian; Peserta; Johan; Penerima Anugerah dll)</small></label>
                     <input name={'peranan'} value={formData.peranan} onChange={handleChange} className={'bg-white p-2 shadow-sm rounded'} type="text" />
                 </div>
                 <div className={'flex flex-col gap-2'}>
