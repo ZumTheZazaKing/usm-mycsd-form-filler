@@ -142,19 +142,24 @@ function App() {
                     <label htmlFor="">Tahun Pengajian</label>
                     <input name={'studyYear'} value={formData.studyYear} onChange={handleChange} className={'bg-white p-2 shadow-sm rounded'} type="text" />
                 </div>
+
+                {/* ADDED sm:col-span-2 HERE to make Tajuk full width */}
                 <div className={'flex flex-col gap-2'}>
                     <label htmlFor="">Tajuk Program / Aktiviti / Pertandingan / Anugerah</label>
                     <input name={'tajuk'} value={formData.tajuk} onChange={handleChange} className={'bg-white p-2 shadow-sm rounded'} type="text" />
                 </div>
+
+                {/* These two now sit nicely side-by-side */}
                 <div className={'flex flex-col gap-2'}>
-                    <label htmlFor="">Peranan <small>(Cth: Keahlian; Peserta; Johan; Penerima Anugerah dll)</small></label>
+                    <label htmlFor="">Peranan <small>(Cth: Peserta)</small></label>
                     <input name={'peranan'} value={formData.peranan} onChange={handleChange} className={'bg-white p-2 shadow-sm rounded'} type="text" />
                 </div>
                 <div className={'flex flex-col gap-2'}>
-                    <label htmlFor="">Tarikh Penyertaan / Kemenangan</label>
+                    <label htmlFor="">Tarikh Penyertaan</label>
                     <input name={'eventDate'} value={formData.eventDate} onChange={handleChange} className={'bg-white p-2 shadow-sm rounded'} type="date" />
                 </div>
-                <div className={'col-span-2 flex flex-col items-center mt-2'}>
+
+                <div className={'col-span-1 sm:col-span-2 flex flex-col items-center mt-2'}>
                     <button type={"submit"} className={'bg-green-600 cursor-pointer text-white p-2 px-4 shadow-sm rounded hover:bg-green-700 transition-colors'}>
                         Generate PDF
                     </button>
